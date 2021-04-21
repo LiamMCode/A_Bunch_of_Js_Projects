@@ -4,7 +4,7 @@
 /*eslint-env es6*/
 /*eslint-env browser*/
 
-const button = document.querySelector('button')
+const button = document.querySelector('div.container button')
 const body = document.querySelector('body')
 const colours = ['red', 'pink', 'blue', 'yellow', 'red', 'green', 'white', 'purple']
 
