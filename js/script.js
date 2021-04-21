@@ -11,7 +11,8 @@ const colours = ['red', 'pink', 'blue', 'yellow', 'red', 'green', 'white', 'purp
 body.style.backgroundColor = 'voilet'
 button.addEventListener('click', changeBackground)
 
-function changeBackground(){
+function changeBackground()
+{
     const colourIndex = parseInt(Math.random()*colours.length)
     body.style.backgroundColor = colours[colourIndex]
 }
