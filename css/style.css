@@ -1,7 +1,4 @@
-button 
-{
-    margin-top: 50vh;
-}
+/* Code For Navbar */
 body 
 {
   margin: 0;
@@ -37,4 +34,16 @@ li a:hover:not(.active)
 {
   background-color: #555;
   color: white;
+}
+
+/* Code for Colour Change Button */
+button 
+{
+    margin-top: 50vh;
+}
+
+/* Code for Colour Change Button (Hex Code) */
+.max-height
+{
+    min-height: 100vh;
 }

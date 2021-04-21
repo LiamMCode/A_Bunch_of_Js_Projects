@@ -3,7 +3,7 @@
     <head>
         <meta charset="UFT-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>Colour Change Button</title>
+        <title>Colour Change Button (With Hex Code)</title>
 
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/style.css">
@@ -19,17 +19,18 @@
             <li><a href="counter.html">Counter</a></li>
         </ul>
 
-        <!-- First Small Project -->
+        <!-- div for hex code & Button -->
         <div class="container">
-            <div class="row max-height align-items-center text-center">
-                <div class="col">
-                    <button class="btn btn-outline-secondary">Click Me</button>
+            <div class="row max-height align-items-center">
+                <div class="col-10 col-md-6 mx-auto text-center">
+                    <h1 class=text-uppercase>hex colour : <span id="hex-value"></span></h1>
+                    <a href="#" id="btn" class="btn btn-secondary text-uppercase my-2">Click Me!</a>
                 </div>
             </div>
         </div>
 
         <script src="./js/jquery-3.4.1.min.js"></script>
         <script src="./js/bootstrap.bundle.min.js"></script>
-        <script src="./js/script.js"></script>  
+        <script src="./js/hex.js"></script>  
     </body>
 </html>
