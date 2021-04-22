@@ -3,10 +3,10 @@
     <head>
         <meta charset="UFT-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>Quotes</title>
+        <title>Counter</title>
 
         <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/quotes.css">
+        <link rel="stylesheet" href="./css/counter.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
     </head>
     
@@ -19,21 +19,19 @@
             <li><a href="counter.html">Counter</a></li>
         </ul>
         
-        <div class="conainer">
+        <div class="container">
             <div class="row max-height align-items-center">
-                <div class="col-11 mx-auto col-md-6 quote-container p-5">
-                    <button class="btn-outline-primary text-capitalize my-4 d-block mx-auto" id="generate-btn">generate quote</button>
-                    <h3 class="text-muted"><span class="quote-icon mr-3"><i class="fas fa-quote-left fa-3x"></i></span><span id="quote">Lorem
-                        ipsum dolor sit amet consectetur, adipisicing elit. Tenetur sint iste optio placeat dolor labore, reprehenderit
-                        ipsum aspernatur blanditiis maiores.</span></h3>
-                    <h5 class="text-right text-capitalize author">-<span class="quote-author ml-3 ">author</span></h5>
+                <div class="col-10 mx-auto col-md-6 text-center main-container p-5">
+                    <h1 class="text-uppercase">Counter</h1>
+                    <h1 id="counter">0</h1>
+                    <button class="btn counterBtn prevBtn text-uppercase m-2">lower count</button>
+                    <button class="btn counterBtn nextBtn text-uppercase m-2">add count</button>
                 </div>
             </div>
         </div>
-
         
         <script src="./js/jquery-3.4.1.min.js"></script>
         <script src="./js/bootstrap.bundle.min.js"></script>
-        <script src="./js/quotes.js"></script>  
+        <script src="./js/counter.js"></script>  
     </body>
 </html>
