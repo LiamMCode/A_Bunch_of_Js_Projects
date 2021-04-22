@@ -1,0 +1,91 @@
+/* Code For Navbar */
+body 
+{
+    margin: 0;
+}
+
+ul 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a 
+{
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active 
+{
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) 
+{
+  background-color: #555;
+  color: white;
+}
+
+/* code for Gallery */
+.max-height
+{
+    min-height: 100vh;
+}
+
+.img-container
+{
+    min-height: 60vh;
+    background: url("../img/back.jpg") center/cover fixed no-repeat;
+    border: 0.5rem solid color:lightBlue;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+@media screen and (min-width: 760px)
+{
+    .img-container
+    [
+        min-height: 80vh;
+    ]
+}
+
+.btn-left
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #3e92cc;
+    color: f3f3f3 !important;
+    transform: translate(-50%, -50%);
+    border: 0.2rem solid color: #3e92cc;
+    font-size: 1.2rem;
+}
+
+.btn-right
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: #3e92cc;
+    color: f3f3f3 !important;
+    transform: translate(-50%, -50%);
+    border: 0.2rem solid color: #3e92cc;
+    font-size: 1.2rem;
+}
+
+.btn-left:hover, btn-right:hover
+{
+    border-color: #3e92cc;
+    background: #f3f3f3f3;
+    color: #3e92cc !important;
+}
