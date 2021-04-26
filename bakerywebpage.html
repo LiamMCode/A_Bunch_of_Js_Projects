@@ -28,7 +28,7 @@
                             <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Store</a>
+                            <a class="nav-link" href="#">shop</a>
                         </li>
                     </ul>
                     
@@ -54,17 +54,276 @@
                 <div class="row max-height justify-content-center align-items-center">
                     <div class="col-10 mx-auto banner text-center">
                         <h1 class="text-capitalize">Welcome to <strong class="banner-title ">Cake Shop</strong></h1>
-                        <a href="#store" class="btn bannner-link text-uppercase my-2">Explore</a>
+                        <a href="#shop" class="btn bannner-link text-uppercase my-2">Explore</a>
                     </div>
+                    
+                    <!-- First Basket Item -->
                     <div id="basket" class="basket">
                         <div class="basket-item d-flex justify-content-between text-capitalize my-3">
                             <img src="img/z-cake-2.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+                            <div class="item-text">
+                                <p id="basket-item-title" class="font-weight-bold mb-0">Basket Item</p>
+                                <p id="basket-price" class="mb-0">10.99</p>
+                            </div>
+                            <a href="#" id="basket-item-remove" class="basket-item-remove"> <i class="fas fa-trash"></i></a>
+                        </div>
+                        
+                        <!-- Second Basket Item -->
+                        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                            <img src="img/z-sweets-3.jpeg" class="img-fluid rounded-circle" id="item-img" alt="">
+                            <div class="basket-item-text">
+
+                              <p id="basket-item-title" class="font-weight-bold mb-0">cart item</p>
+                              <p id="basket-item-price" class="mb-0">10.99</p>
+                            </div>
+                            <a href="#" id='basket-item-remove' class="basket-item-remove"> <i class="fas fa-trash"></i></a>
+                        </div>
+                        
+                        <!-- Basket Total -->
+                         <div class="basket-total-container d-flex justify-content-around text-capitalize mt-5">
+                            <h5>total</h5>
+                            <h5> £ <strong id="basket-total" class="font-weight-bold">10.00</strong> </h5>
+                        </div>
+                        
+                        <!-- basket buttons -->
+                        <div class="basket-buttons-container mt-3 d-flex justify-content-between">
+                            <a href="#" id="clear-basket" class="btn btn-outline-secondary btn-black text-uppercase">clear basket</a>
+                            <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
         
+        <!-- Actual Shop Section -->
+        <section id="shop" class="shop py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 mx-auto col-sm-6 text-center">
+                        <h1 class="text-capitalize">our <strong class="banner-title ">Shop</strong></h1>
+                    </div>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap">
+                        <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="all">All</a>
+                        <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="cakes">Cakes</a>
+                        <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="muffins">Muffins</a>
+                        <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="sweets">Sweets</a>
+                        <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" data-filter="doughnuts">Doughnuts</a>
+                    </div>
+                </div>
+                
+                <!-- Search Box -->
+                <div class="row">
+                    <div class="col-10 mx-auto col-md-6">
+                        <form>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend ">
+                                <span class="input-group-text search-box" id="search-icon"><i class="fas fa-search"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder='item....' id="search-item">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- shop  items-->
+                <div class="row" id="shop-items">
+                <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item sweets" data-item="sweets">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/sweets-1.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"> <i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">sweet item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item muffin" data-item="muffin">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/muffin-1.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">muffin item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item cakes" data-item="cakes">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/cake-1.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">cake item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item doughnuts" data-item="dougnuts">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/doughnut-1.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">dougnut item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">5</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item sweets" data-item="sweets">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/sweets-2.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">sweet item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+       
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item muffins" data-item="muffins">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/muffin-2.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">muffin item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item cakes" data-item="cakes">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/cake-2.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">cake item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item doughnuts" data-item="dougnuts">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/doughnut-2.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">dougnut item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item sweets" data-item="sweets">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/sweets-3.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">sweet item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">15</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item muffins" data-item="muffins">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/muffin-3.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">muffin item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">15</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item cakes" data-item="cakes">
+                        <div class="card ">
+                            <div class="img-container">
+                              <img src="img/cake-3.jpeg" class="card-img-top shop-img" alt=""><span class="shop-item-icon"></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">cake item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">15</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- next item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 shop-item doughnuts" data-item="dougnuts">
+                        <div class="card ">
+                            <div class="img-container">
+                                <img src="img/doughnut-3.jpeg" class="card-img-top shop-img" alt="">
+                                <span class="shop-item-icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="shop-item-name">dougnut item</h5>
+                                    <h5 class="shop-item-value">£ <strong id="shop-item-price" class="font-weight-bold">10</strong></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </section>
         <!-- Navigation Bar -->
         <ul>
             <li><a href="index.html">Colour Change Button</a></li>
