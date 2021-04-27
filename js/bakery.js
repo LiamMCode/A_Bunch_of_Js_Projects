@@ -4,7 +4,7 @@
 
 (function(){
     const buttons = document.querySelectorAll('.btn')
-    const shopItems = document.querySelectorAll('.shop-item')
+    const shopItems = document.querySelectorAll('.store-item')
     
     buttons.forEach((button)=> {
         button.addEventListener('click', (e) => {
@@ -34,7 +34,7 @@
 
 (function(){
     const searchBox = document.querySelector('#search-item')
-    const shopItems = document.querySelectorAll('.shop-item')
+    const shopItems = document.querySelectorAll('.store-item')
     
     searchBox.addEventListener('keyup', (e) => {
         const searchFilter = e.target.value.toLowerCase().trim()

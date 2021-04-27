@@ -6,7 +6,7 @@ body
     background: #fff;
     color: #000;
 }
-
+/*
 ul 
 {
   list-style-type: none;
@@ -38,7 +38,7 @@ li a:hover:not(.active)
   background-color: #555;
   color: white;
 }
-
+*/
 /* Code to make bakery look pretty */
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
 
@@ -64,13 +64,13 @@ li a:hover:not(.active)
 }
 
 /* info icons */
-.basket-info__icon 
+.-info__icon 
 {
     color: #000;
     cursor: pointer;
 }
 
-.basket-info
+.-info
 {
     border: 0.1rem solid color: #000;
     color: #000;
@@ -78,7 +78,7 @@ li a:hover:not(.active)
     padding: 0.4rem 0.6rem;
     cursor: pointer;
 }
-.basket-info:hover
+.-info:hover
 {
     color: #fff;
 }
@@ -87,7 +87,7 @@ li a:hover:not(.active)
 .max-height
 {
     min-height: calc(100vh - 76px);
-    background: linear-gradient(rgba(249,228,148,0.5), rgba(249,228,148,0.5)), url("..img/headerBcg.jpeg") center/cover fixed no-repeat;
+    background: linear-gradient(rgba(249,228,148,0.5), rgba(249,228,148,0.5)), url("../img/headerBcg.jpeg") center/cover fixed no-repeat;
     position: relative;
 }
 .banner
@@ -112,8 +112,8 @@ li a:hover:not(.active)
     color: #ef7998;
 }
 
-/* Basket */
-.basket
+/*  */
+.
 {
     position: absolute;
     min-height: 10rem;
@@ -125,34 +125,34 @@ li a:hover:not(.active)
     width: 0;
     overflow: hidden;
 }
-.show-basket
+.show-
 {
     width: 10rem;
     padding: 2rem 1.5rem;
     transform: rotateY(-360deg);
 }
-.basket-item
+.-item
 {
     transition: all 2s ease-in-out;
 }
 
-/* basket Items */
-.basket-item-remove
+/*  Items */
+.-item-remove
 {
     color: #ef7998;
     transition: all 1s ease-in-out;
 }
-.basket-item-remove:hover
+.-item-remove:hover
 {
     transform: scale(1.1);
     color: #000;
 }
-#basket-item-price
+#-item-price
 {
     font-size: 0.8rem;
 }
 
-/* Basket Buttons */
+/*  Buttons */
 .btn-pink
 {
     color: #ef7998; !important;
@@ -190,7 +190,7 @@ li a:hover:not(.active)
     left: 0;
 }
 
-/* shop items */
+/* store items */
 .store
 {
     background: rgb(238,238,238);
@@ -201,7 +201,7 @@ li a:hover:not(.active)
     overflow: hidden;
     cursor:pointer;
 }
-.shop-img
+.store-img
 {
     transition: all 1s ease-in-out;
 }
@@ -209,7 +209,7 @@ li a:hover:not(.active)
 {
     transform: scale(1.2);
 }
-.shop-item-icon
+.store-item-icon
 {
     position: absolute;
     bottom: 0;
@@ -220,11 +220,11 @@ li a:hover:not(.active)
     transition: all 1s ease-in-out;
     transform: translate(100%, 100%);
 }
-.img-container:hover .shop-item-icon
+.img-container:hover .store-item-icon
 {
     color: #fff;
 }
-.shop-item-value
+.store-item-value
 {
     color: rgb(249, 0, 148);
 }
