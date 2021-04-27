@@ -2,6 +2,9 @@
 body 
 {
     margin: 0;
+    font-family: "Kaushan Script", cursive;
+    background: #fff;
+    color: #000;
 }
 
 ul 
@@ -37,3 +40,197 @@ li a:hover:not(.active)
 }
 
 /* Code to make bakery look pretty */
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+/* Nav Links */
+.navbar-toggler
+{
+    outline: none !important;
+}
+.toggler-icon
+{
+    font-size: 2.5rem;
+    color: #ef7998;
+}
+.nav-link
+{
+    color: #ef7998;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+.nav-link:hover
+{
+    color: #000;
+}
+
+/* info icons */
+.basket-info__icon 
+{
+    color: #000;
+    cursor: pointer;
+}
+
+.basket-info
+{
+    border: 0.1rem solid color: #000;
+    color: #000;
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+.basket-info:hover
+{
+    color: #fff;
+}
+
+/* Banner CSS */
+.max-height
+{
+    min-height: calc(100vh - 76px);
+    background: linear-gradient(rgba(249,228,148,0.5), rgba(249,228,148,0.5)), url("..img/headerBcg.jpeg") center/cover fixed no-repeat;
+    position: relative;
+}
+.banner
+{
+    color: #fff;
+    margin-top: -4rem;
+}
+.banner-title
+{
+    color: #ef7998;
+    font-size: 4rem;
+}
+.banner-link
+{
+    font-size: 1.5rem;
+    color: #000;
+    border: 0.2rem solid color: #000;
+}
+.banner-link:hover
+{
+    background: #000;
+    color: #ef7998;
+}
+
+/* Basket */
+.basket
+{
+    position: absolute;
+    min-height: 10rem;
+    background: #fff;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255,255,255,0.5);
+    width: 0;
+    overflow: hidden;
+}
+.show-basket
+{
+    width: 10rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+}
+.basket-item
+{
+    transition: all 2s ease-in-out;
+}
+
+/* basket Items */
+.basket-item-remove
+{
+    color: #ef7998;
+    transition: all 1s ease-in-out;
+}
+.basket-item-remove:hover
+{
+    transform: scale(1.1);
+    color: #000;
+}
+#basket-item-price
+{
+    font-size: 0.8rem;
+}
+
+/* Basket Buttons */
+.btn-pink
+{
+    color: #ef7998; !important;
+    border-color: #ef7998; !important;
+}
+.btn-black {
+  color: #000 !important;
+  border-color: #000 !important;
+}
+.btn-black:hover {
+  color: #ef7998 !important;
+  background: #000 !important;
+}
+.btn-pink:hover {
+  background: #ef7998 !important;
+  color: #000 !important;
+}
+
+/* About */
+.about-img--container::before
+{
+    content= "";
+    position: absolute;
+    top: -1.5rem;
+    left: -1.7rem;
+    width: 100%;
+    height: 100%;
+    outline: 0.5rem solid color: rgb(249,228,148);
+    z-index: -1;
+    transition: all 1s ease-in-out;
+}
+.about-img__conatiner:hover:before
+{
+    top: 0;
+    left: 0;
+}
+
+/* shop items */
+.store
+{
+    background: rgb(238,238,238);
+}
+.img-container
+{
+    position: relative;
+    overflow: hidden;
+    cursor:pointer;
+}
+.shop-img
+{
+    transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img
+{
+    transform: scale(1.2);
+}
+.shop-item-icon
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    background: rgb(249, 228, 148);
+    border-top-left-radius: 1rem;
+    transition: all 1s ease-in-out;
+    transform: translate(100%, 100%);
+}
+.img-container:hover .shop-item-icon
+{
+    color: #fff;
+}
+.shop-item-value
+{
+    color: rgb(249, 0, 148);
+}
+
+.search-box
+{
+    background: #ef7998;
+    color: #000;
+}
