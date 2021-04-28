@@ -3,7 +3,7 @@
 /*eslint-env browser*/
 
 // function for category search (using the buttons)
-(function(){
+(function () {
     const buttons = document.querySelectorAll('.btn')
     const shopItems = document.querySelectorAll('.store-item')
     
@@ -34,7 +34,7 @@
 })();
 
 //function for product search
-(function(){
+(function () {
     const searchBox = document.querySelector('#search-item')
     const shopItems = document.querySelectorAll('.store-item')
     

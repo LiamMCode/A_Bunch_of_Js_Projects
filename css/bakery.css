@@ -1,7 +1,8 @@
 /* Code to make bakery look pretty */
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
 
-:root {
+:root 
+{
   --mainPink: #ef7998;
   --mainYellow: rgb(249, 228, 148);
   --mainWhite: #fff;
@@ -26,13 +27,12 @@ body
   font-size: 2.5rem;
   color: var(--mainPink);
 }
-.nav-link 
-{
+.nav-link {
   color: var(--mainPink);
   font-size: 1.5rem;
   transition: all 0.5s ease-in-out;
 }
-.nav-link:hover .dropdown:hover .dropdown-toggle 
+.nav-link:hover
 {
   color: var(--mainBlack);
 }
@@ -44,7 +44,7 @@ body
   cursor: pointer;
 }
 
-.cart-info 
+.cart-info
 {
   border: 0.1rem solid var(--mainBlack);
   color: var(--mainBlack);
@@ -52,7 +52,7 @@ body
   padding: 0.4rem 0.6rem;
   cursor: pointer;
 }
-.cart-info:hover 
+.cart-info:hover
 {
   background: var(--mainPink);
   border-color: var(--mainPink);
@@ -64,6 +64,7 @@ body
 }
 
 /* banner */
+
 .max-height 
 {
   min-height: calc(100vh - 76px);
@@ -71,17 +72,17 @@ body
     url("../img/headerBcg.jpeg") center/cover fixed no-repeat;
   position: relative;
 }
-.banner 
+.banner
 {
   color: var(--mainWhite);
   margin-top: -4rem;
 }
-.banner-title 
+.banner-title
 {
   color: var(--mainPink);
   font-size: 4rem;
 }
-.banner-link 
+.banner-link
 {
   font-size: 1.5rem;
   color: var(--mainBlack);
@@ -92,8 +93,9 @@ body
   background: var(--mainBlack);
   color: var(--mainPink);
 }
-/* basket */
-.cart 
+
+/* cart  */
+.cart
 {
   position: absolute;
   min-height: 10rem;
@@ -111,7 +113,7 @@ body
   padding: 2rem 1.5rem;
   transform: rotateY(-360deg);
 }
-.cart-item 
+.cart-item
 {
   transition: all 2s ease-in-out;
 }
@@ -131,8 +133,8 @@ body
 {
   font-size: 0.8rem;
 }
-/* cart item */
-/* basket buttons */
+
+/* cart buttons */
 .btn-pink 
 {
   color: var(--mainPink) !important;
@@ -178,7 +180,7 @@ body
   left: 0;
 }
 
-/* shop items */
+/* store items */
 .store 
 {
   background: var(--mainGrey);
@@ -270,37 +272,3 @@ body
 {
     display: block;
 }
-
-/*
-ul 
-{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 15%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-li a 
-{
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-li a.active 
-{
-  background-color: #4CAF50;
-  color: white;
-}
-
-li a:hover:not(.active) 
-{
-  background-color: #555;
-  color: white;
-}
-*/
