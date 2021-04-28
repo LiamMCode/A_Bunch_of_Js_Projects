@@ -36,13 +36,11 @@ li a:hover:not(.active)
   color: white;
 }
 
-/* Code for Colour Change Button */
 button 
 {
     margin-top: 5vh;
 }
 
-/* Code for Colour Change Button (Hex Code) */
 .max-height
 {
     min-height: 100vh;
