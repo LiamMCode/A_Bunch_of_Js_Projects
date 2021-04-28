@@ -1,18 +1,9 @@
 body
 {
-    margin: 0; 
-
-}
-section
-{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.calculator
-{
     flex: 0 0 95%;
 }
 .screen
@@ -65,7 +56,7 @@ button:hover
     background: red;
 }
 
-ul 
+.navbar ul
 {
     list-style-type: none;
     margin: 0;
@@ -75,9 +66,10 @@ ul
     position: fixed;
     height: 100%;
     overflow: auto;
+    left: 0;
 }
 
-li a 
+.navbar li a 
 {
     display: block;
     color: #000;
@@ -85,13 +77,13 @@ li a
     text-decoration: none;
 }
 
-li a.active 
+.navbar li a.active 
 {
     background-color: #4CAF50;
     color: white;
 }
 
-li a:hover:not(.active) 
+.navbar li a:hover:not(.active) 
 {
     background-color: #555;
     color: white;
