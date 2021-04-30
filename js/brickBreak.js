@@ -212,5 +212,57 @@ function endGame()
 
 function stopper()
 {
+    player.inPlay = false;
+    player.ballDir[0, -5];
+    waitingOnPaddle();
+    window.cancelAnimationFrame(player.ani);
+}
+
+function moveBall()
+{
+    let posBall = {
+        x: ball.offsetLeft, y: ball.offsetTop
+    }
     
+    if (posBall.y > (conDim.height - 20) || posBall.y < 0)
+    {
+        if (posBall.y > (conDim.height - 20))
+        {
+            fallOff();
+        }
+        else
+        {
+            player.ballDir[1] *= -1;
+        }
+    }
+    if (posBall.x > (conDim.width - 20) || posBall.x < 0) 
+    {
+        player.ballDir[0] *= -1;
+    }
+    if (isCollide(paddle, ball)) 
+    {
+        let temp = ((posBall.x - paddle.offsetLeft) - (paddle.offsetWidth / 2)) / 10;
+        player.ballDir[0] = temp;
+        player.ballDir[1] *= -1;
+    }
+    let bricks = document.querySelectorAll('.brick');
+    if (bricks.length == 0 && !player.gameover) 
+    {
+        stopper();
+        setUpBricks(player.num);
+    }
+    for (let tBrick of bricks) 
+    {
+        if (isCollide(tBrick, ball)) 
+        {
+            player.ballDir[1] *= -1;
+            tBrick.parentNode.removeChild(tBrick);
+            player.score++;
+            scoreUpdater();
+        }
+    }
+    posBall.y += player.ballDir[1];
+    posBall.x += player.ballDir[0];
+    ball.style.top = posBall.y + 'px';
+    ball.style.left = posBall.x + 'px';
 }
