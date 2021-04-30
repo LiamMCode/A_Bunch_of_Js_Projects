@@ -1,0 +1,103 @@
+:root 
+{
+    --mainPink: #ef7998;
+    --mainBlack: #000;
+}
+/* nav links */
+.navbar-toggler 
+{
+  outline: none !important;
+}
+.toggler-icon 
+{
+  font-size: 2.5rem;
+  color: var(--mainPink);
+}
+.nav-link {
+  color: var(--mainPink);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav-link:hover
+{
+  color: var(--mainBlack);
+}
+
+/* Dropdwon menu code */
+.dropdown-toggle 
+{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+}
+
+.dropdown 
+{
+    padding: 7px;
+    position: inherit;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    color: var(--mainPink);
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+body
+{
+    background-color: lightslategrey;
+}
+#loancal 
+{
+    width: 500px;
+    height: 500px;
+    background-color:#000;
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#months, #amount, #interest_rate
+{
+    width: 175px;
+    height: 20px;
+}
+
+#interest_rate 
+{
+    margin-left: 2px;
+}
+
+h1 
+{
+    font-size:40px;
+}
