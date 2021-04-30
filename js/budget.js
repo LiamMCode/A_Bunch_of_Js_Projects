@@ -22,7 +22,7 @@ class UI {
 
   //submit budget method
   submitBudgetForm()
-    {
+  {
       const value = this.budgetInput.value;
       if(value === '' || value < 0)
       {
@@ -43,7 +43,7 @@ class UI {
 
   //show balance
   showBalance()
-    {
+  {
     const expense = this.totalExpense();
     const total = parseInt(this.budgetAmount.textContent) - expense;
     this.balanceAmount.textContent = total;
@@ -65,7 +65,7 @@ class UI {
   }
   //submit expense form
   submitExpenseForm()
-    {
+  {
     const expenseValue = this.expenseInput.value;
     const amountValue = this.amountInput.value;
     if(expenseValue === '' || amountValue === '' || amountValue < 0)
@@ -96,7 +96,7 @@ class UI {
 
   //add expense
   addExpense(expense)
-    {
+  {
     const div = document.createElement('div');
     div.classList.add('expense');
     div.innerHTML = `<div class="expense-item d-flex justify-content-between align-items-baseline">
@@ -130,7 +130,8 @@ class UI {
   }
 
   //edit expense
-  editExpense(element){
+  editExpense(element)
+  {
     let id = parseInt(element.dataset.id);
     let parent = element.parentElement.parentElement.parentElement;
     //remove from DOM
@@ -154,7 +155,7 @@ class UI {
 
   //delete expense
   deleteExpense(element)
-    {
+  {
     let id = parseInt(element.dataset.id);
     let parent = element.parentElement.parentElement.parentElement;
     //remove from DOM
