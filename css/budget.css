@@ -1,0 +1,229 @@
+:root 
+{
+    --mainWhite: #f5f5f5f5;
+    --mainDark: #333333;
+    --mainGreen: #317b22;
+    --mainRed: #b80c09;
+    --mainBlue: #05668d;
+    --mainPink: #ef7998;
+    --mainBlack: #000;
+}
+/* nav links */
+.navbar-toggler 
+{
+  outline: none !important;
+}
+.toggler-icon 
+{
+  font-size: 2.5rem;
+  color: var(--mainPink);
+}
+.nav-link {
+  color: var(--mainPink);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav-link:hover
+{
+  color: var(--mainBlack);
+}
+
+/* Dropdwon menu code */
+.dropdown-toggle 
+{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+}
+
+.dropdown 
+{
+    padding: 7px;
+    position: inherit;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    color: var(--mainPink);
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+body 
+{
+    background: var(--mainWhite);
+    color: var(--mainDark);
+}
+.budget-feedback,
+.expense-feedback 
+{
+    display: none;
+}
+
+.budget-form 
+{
+    border: 0.15rem solid var(--mainGreen);
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+.expense-form 
+{
+    border: 0.15rem solid var(--mainRed);
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+.budget-submit
+{
+    background: transparent;
+    border: 0.1rem solid var(--mainGreen);
+    color: var(--mainGreen);
+}
+.expense-submit
+{
+    background: transparent;
+    border: 0.1rem solid var(--mainRed);
+    color: var(--mainRed);
+}
+.expense-submit:hover 
+{
+    background: var(--mainRed);
+    color: var(--mainWhite);
+}
+.budget-submit:hover
+{
+    background: var(--mainGreen);
+    color: var(--mainDark);
+}
+
+.budget-input
+{
+    border: 0.05rem solid var(--mainGreen) !important;
+}
+.expense-input 
+{
+    border: 0.05rem solid var(--mainRed) !important;
+}
+.expense-amount,
+.expense-title 
+{
+    color: var(--mainRed);
+}
+.edit-icon 
+{
+    color: var(--mainBlue);
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none !important;
+}
+.delete-icon 
+{
+    color: var(--mainRed);
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none !important;
+}
+.edit-icon:hover
+{
+    color: var(--mainBlue);
+}
+.delete-icon:hover 
+{
+    color: var(--mainRed);
+}
+.showItem
+{
+    display: block;
+}
+.info-title 
+{
+    font-size: 1.5rem;
+}
+.budget
+{
+    font-size: 1.6rem;
+    color: var(--mainGreen);
+}
+.expense 
+{
+    font-size: 1.6rem;
+    color: var(--mainRed);
+}
+.balance 
+{
+    font-size: 1.6rem;
+}
+.budget-icon,
+.expense-icon,
+.balance-icon 
+{
+    font-size: 2.5rem;
+    color: var(--mainBlue);
+}
+.showRed 
+{
+    color: var(--mainRed);
+}
+.showGreen
+{
+    color: var(--mainGreen);
+}
+.showBlack 
+{
+    color: var(--mainDark);
+}
+@media screen and (min-width: 992px) 
+{
+    .budget 
+    {
+        font-size: 2.6rem;
+        color: var(--mainGreen);
+    }
+    .expense 
+    {
+        font-size: 2.6rem;
+        color: var(--mainRed);
+    }
+    .balance 
+    {
+        font-size: 2.6rem;
+    }
+    .budget-icon,
+    .expense-icon,
+    .balance-icon 
+    {
+        font-size: 3.5rem;
+        color: var(--mainBlue);
+    }
+}
+.list-item 
+{
+    flex: 0 0 33.33%;
+    text-align: center;
+}
+.expense-item 
+{
+    height: 2rem;
+}

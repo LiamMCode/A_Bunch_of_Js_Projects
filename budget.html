@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/budget.css">
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+        <link rel="stylesheet" href="./css/all.css">
+        <title>budget</title>
+    </head>
+
+    <body>
+        <header> 
+            <header>
+            <nav class="navbar navbar-expand-lg px-4">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                    <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="myNav">
+                    <ul class="navbar-nav mx-auto text-capitalize">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> Easy Projects <b class="caret"></b></a>
+                            <ul class="dropdown-content">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Colour Change</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="hex.html">Colour Change Hex Code</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="quotes.html">Random Quote</a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="counter.html">Counter</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="calculator.html">Calculator</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="clock.html">Clock</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> Intermediate Projects <b class="caret"></b></a>
+                            <ul class="dropdown-content">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="bakerywebpage.html">Bakery Webpage</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="budget.html">Budgeting</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-11 mx-auto pt-3">
+                    <!-- title -->
+                    <h3 class="text-uppercase mb-4">budget app</h3>
+                    <div class="row">
+                        <div class="col-md-5 my-3">
+                            <!-- budget feedback -->
+                            <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
+                            <!-- budget form -->
+                            <form id="budget-form" class=" budget-form">
+                                <h5 class="text-capitalize">please enter your budget</h5>
+                                <div class="form-group">
+                                    <input type="number" class="form-control budget-input" id="budget-input">
+                                </div>
+                                <!-- submit button -->
+                                <button type="submit" class="btn text-capitalize budget-submit" id="budget-submit">calculate</button>
+                            </form>
+                        </div>
+                        <div class="col-md-7">
+                            <!-- app info -->
+                            <div class="row my-3">
+                                <div class="col-4 text-center mb-2">
+                                    <h6 class="text-uppercase info-title">budget</h6>
+                                    <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
+                                    <h4 class="text-uppercase mt-2 budget" id="budget"><span>£ </span><span id="budget-amount">0</span></h4>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h6 class="text-uppercase info-title">expenses</h6>
+                                    <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+                                    <h4 class="text-uppercase mt-2 expense" id="expense"><span>£ </span><span id="expense-amount">0</span></h4>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <h6 class="text-uppercase info-title">balance</h6>
+                                    <span class="balance-icon"><i class="fas fa-dollar-sign"></i></span>
+                                    <h4 class="text-uppercase mt-2 balance" id="balance"> <span>£ </span><span id="balance-amount">0</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 my-3">
+                            <!-- expense feedback -->
+                            <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
+                            <!-- expense form -->
+                            <form id="expense-form" class=" expense-form">
+                                <h5 class="text-capitalize">please enter your expense</h5>
+                                <div class="form-group">
+                                    <input type="text" class="form-control expense-input" id="expense-input">
+                                </div>
+                                <h5 class="text-capitalize">please enter expense amount</h5>
+                                <div class="form-group">
+                                    <input type="number" class="form-control expense-input" id="amount-input">
+                                </div>
+                                <!-- submit button -->
+                                <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">add expense</button>
+                            </form>
+                        </div>
+                        <div class="col-md-7 my-3">
+                            <!-- expense list -->
+                            <div class="expense-list" id="expense-list">
+
+                                <div class="expense-list__info d-flex justify-content-between text-capitalize">
+                                    <h5 class="list-item">expense title</h5>
+                                    <h5 class="list-item">expense value</h5>
+                                    <h5 class="list-item"></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/budget.js"></script>
+    </body>
+</html>
