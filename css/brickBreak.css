@@ -1,0 +1,100 @@
+:root 
+{
+    --mainPink: #ef7998;
+    --mainBlack: #000;
+}
+/* nav links */
+.navbar-toggler 
+{
+  outline: none !important;
+}
+.toggler-icon 
+{
+  font-size: 2.5rem;
+  color: var(--mainPink);
+}
+.nav-link {
+  color: var(--mainPink);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav-link:hover
+{
+  color: var(--mainBlack);
+}
+
+/* Dropdwon menu code */
+.dropdown-toggle 
+{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+}
+
+.dropdown 
+{
+    padding: 7px;
+    position: inherit;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    color: var(--mainPink);
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+.container
+{
+    height: 400px;
+    width: 80%;
+    margin-left: 5%;
+    overflow: hidden;
+    border: 1px solid black;
+    margin-top: 20px;
+    position: relative;
+    background-color: darkgray;
+}
+
+.score, .lives
+{
+    font-size: 3em;
+}
+
+.brick
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 91px;
+    height: 40px;
+    padding: 1px;
+    color: white;
+    border: 1px solid white;
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 40px;
+}
