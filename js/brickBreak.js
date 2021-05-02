@@ -30,8 +30,8 @@ ball.style.backgroundSize = "20px 20px";
 ball.style.top = "70%";
 ball.style.left = "50%";
 ball.style.display = "none";
-
 container.appendChild(ball);
+
 const paddle = document.createElement('div');
 paddle.style.position = "absolute";
 paddle.style.backgroundColor = "white";
