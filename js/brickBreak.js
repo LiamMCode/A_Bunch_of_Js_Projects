@@ -30,8 +30,8 @@ ball.style.backgroundSize = "20px 20px";
 ball.style.top = "70%";
 ball.style.left = "50%";
 ball.style.display = "none";
-container.appendChild(ball);
 
+container.appendChild(ball);
 const paddle = document.createElement('div');
 paddle.style.position = "absolute";
 paddle.style.backgroundColor = "white";
@@ -43,7 +43,7 @@ paddle.style.left = "50%";
 container.appendChild(paddle);
 
 // movement controls
-document.addEventListener('keydown', function(e)
+document.addEventListener('keydown', function (e) 
 {
     if (e.keyCode === 37) //left arrow
     {
@@ -51,23 +51,23 @@ document.addEventListener('keydown', function(e)
     }
     if (e.keyCode === 39) //right arrow
     {
-        paddle.right = true;        
+        paddle.right = true;
     }
-    if (e.keyCode === 38 && !player.inPlay) // up arrow
+    if (e.keyCode === 38 && !player.inPlay) //up arrow
     {
         player.inPlay = true;
     }
 })
 
-document.addEventListener('keyup', function(e)
+document.addEventListener('keyup', function (e) 
 {
     if (e.keyCode === 37)
     {
-        paddle.left = false;    
+        paddle.left = false;
     }
-        if (e.keyCode === 39)
+    if (e.keyCode === 39)
     {
-        paddle.right = false;        
+        paddle.right = false;
     }
 })
 
@@ -75,9 +75,9 @@ const player = {
     gameOver: true
 };
 
-function startGame()
+function startGame() 
 {
-    if (player.gameOver)
+    if (player.gameOver) 
     {
         player.gameOver = false;
         gameOver.style.display = "none";
@@ -86,7 +86,7 @@ function startGame()
         player.inPlay = false;
         ball.style.display = "block";
         ball.style.left = paddle.offsetLeft + 50 + "px";
-        ball.style.top = paddle.offsetTop + 30 + "px";
+        ball.style.top = paddle.offsetTop - 30 + "px";
         player.ballDir = [2, -5];
         player.num = 80;
         setUpBricks(player.num);
@@ -95,25 +95,26 @@ function startGame()
     }
 }
 
-function setUpBricks(num)
+function setUpBricks(num) 
 {
     let row = {
-        x: ((conDim.width % 100) /2) , y: 50
+        x: ((conDim.width % 100) / 2)
+        , y: 50
     }
     let skip = false;
-    for (let x = 0; x < num; x++)
+    for (let x = 0; x < num; x++) 
     {
-        if (row.x > (conDim.width - 100))
+        if (row.x > (conDim.width - 100)) 
         {
             row.y += 50;
-            if (row.y > (conDim.height / 2))
+            if (row.y > (conDim.height / 2)) 
             {
                 skip = true;
             }
-            row.x = ((conDim.width & 100) / 2);
+            row.x = ((conDim.width % 100) / 2);
         }
         row.count = x;
-        if (!skip)
+        if (!skip) 
         {
             createBrick(row);
         }
@@ -122,72 +123,73 @@ function setUpBricks(num)
 }
 
 //creates bricks
-function createBrick(pos)
+function createBrick(pos) 
 {
     const div = document.createElement('div');
     div.setAttribute('class', 'brick');
-    div.style.backgroundColor = rColour();
-    div.style.left = pos.x = 'px';
-    div.style.top = pos.y = 'px';
+    div.style.backgroundColor = rColor();
+    div.textContent = pos.count + 1;
+    div.style.left = pos.x + 'px';
+    div.style.top = pos.y + 'px';
     container.appendChild(div);
 }
 
-//checks for collison between ball and bricks
-function isCollide(a, b)
+// checks for collison between ball and bricks
+function isCollide(a, b) 
 {
     let aRect = a.getBoundingClientRect();
     let bRect = b.getBoundingClientRect();
     return !((aRect.right < bRect.left) || (aRect.left > bRect.right) || (aRect.bottom < bRect.top) || (aRect.top > bRect.bottom));
 }
 
-//geneates a random colour
-function rColour()
+//generates a random colour
+function rColor() 
 {
     return '#' + Math.random().toString(16).substr(-6);
 }
 
-function scoreUpdater()
+function scoreUpdater() 
 {
     document.querySelector('.score').textContent = player.score;
     document.querySelector('.lives').textContent = player.lives;
 }
 
-function update()
+function update() 
 {
-    if (!player.gameOver)
+    if (!player.gameOver) 
     {
         let pCurrent = paddle.offsetLeft;
-        if (paddle.left && pCurrent > 0)
+        if (paddle.left && pCurrent > 0) 
         {
             pCurrent -= 5;
         }
-        if (paddle.right && (pCurrent < (conDim.width - paddle.offsetWidth)))
+        if (paddle.right && (pCurrent < (conDim.width - paddle.offsetWidth))) 
         {
             pCurrent += 5;
         }
         paddle.style.left = pCurrent + 'px';
-        if (!player.inPlay)
+        if (!player.inPlay) 
         {
             waitingOnPaddle();
         }
-        else
+        else 
         {
-            moveBall();    
+            moveBall();
         }
         player.ani = window.requestAnimationFrame(update);
     }
 }
 
-function waitingOnPaddle()
+function waitingOnPaddle() 
 {
     ball.style.top = (paddle.offsetTop - 22) + 'px';
     ball.style.left = (paddle.offsetLeft + 40) + 'px';
 }
 
-function fallOff()
+function fallOff() 
 {
     player.lives--;
-    if (player.lives < 0)
+    if (player.lives < 0) 
     {
         endGame();
         player.lives = 0;
@@ -196,21 +198,21 @@ function fallOff()
     stopper();
 }
 
-function endGame()
+function endGame() 
 {
     gameOver.style.display = "block";
-    gameOver.innerHTML = "Game Over<br>Your Score " + player.score;
+    gameOver.innerHTML = "Game Over<br>Your score " + player.score;
     player.gameOver = true;
     ball.style.display = "none";
     let tempBricks = document.querySelectorAll('.brick');
-    for (let tBrick of tempBricks)
+    for (let tBrick of tempBricks) 
     {
         tBrick.parentNode.removeChild(tBrick);
     }
     window.cancelAnimationFrame(player.ani);
 }
 
-function stopper()
+function stopper() 
 {
     player.inPlay = false;
     player.ballDir[0, -5];
@@ -218,35 +220,35 @@ function stopper()
     window.cancelAnimationFrame(player.ani);
 }
 
-function moveBall()
+function moveBall() 
 {
     let posBall = {
-        x: ball.offsetLeft, y: ball.offsetTop
+        x: ball.offsetLeft
+        , y: ball.offsetTop
     }
-    
-    if (posBall.y > (conDim.height - 20) || posBall.y < 0)
+    if (posBall.y > (conDim.height - 20) || posBall.y < 0) 
     {
-        if (posBall.y > (conDim.height - 20))
+        if (posBall.y > (conDim.height - 20)) 
         {
             fallOff();
         }
-        else
+        else 
         {
             player.ballDir[1] *= -1;
         }
     }
-    if (posBall.x > (conDim.width - 20) || posBall.x < 0) 
+    if (posBall.x > (conDim.width - 20) || posBall.x < 0)
     {
         player.ballDir[0] *= -1;
     }
-    if (isCollide(paddle, ball)) 
+    if (isCollide(paddle, ball))
     {
         let temp = ((posBall.x - paddle.offsetLeft) - (paddle.offsetWidth / 2)) / 10;
         player.ballDir[0] = temp;
         player.ballDir[1] *= -1;
     }
     let bricks = document.querySelectorAll('.brick');
-    if (bricks.length == 0 && !player.gameover) 
+    if (bricks.length == 0 && !player.gameOver) 
     {
         stopper();
         setUpBricks(player.num);
