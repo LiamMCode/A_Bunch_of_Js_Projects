@@ -25,7 +25,7 @@ ball.style.width = "20px";
 ball.style.height = "20px";
 ball.style.backgroundColor = "white";
 ball.style.borderRadius = "25px";
-ball.style.backgroundImage = "url('ball.png')";
+ball.style.backgroundImage = "url('./img/ball.png')";
 ball.style.backgroundSize = "20px 20px";
 ball.style.top = "70%";
 ball.style.left = "50%";
@@ -149,7 +149,7 @@ function rColour()
 function scoreUpdater()
 {
     document.querySelector('.score').textContent = player.score;
-    document.querySelector('lives').textContent = player.lives;
+    document.querySelector('.lives').textContent = player.lives;
 }
 
 function update()
