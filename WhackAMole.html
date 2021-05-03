@@ -3,10 +3,10 @@
     <head>
         <meta charset="UFT-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>Mortgage Calc.</title>
+        <title>Whack A Mole</title>
 
         <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/mortgageCalc.css">
+        <link rel="stylesheet" href="./css/whackamole.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
         <link rel="stylesheet" href="./css/all.css">
     </head>
@@ -75,13 +75,35 @@
         </nav>
     </header>
     
-    <div id="loancal">
-        <h1>Loan Calculator</h1>
-        <p>Loan Amount: $<input id="amount" type="number" min="1" max="5000000" onchange="computeLoan()"></p>
-        <p>Interest Rate: %<input id="interest_rate" min="0" max="100" value="10" step=".1" onchange="computeLoan()"></p>
-        <p>Months to Pay: <input id="months" type="number" min="1" max="300" value="1" step="1" onchange="computeLoan()"></p>
-        <h2 id="payment"></h2>
+    <h1>Whack-a-mole!</h1><span class="score">0</span>
+    <button id="start" onClick="startGame()">Start!</button>
+
+    <div class="game">
+        <div class="hole hole1">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole2">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole3">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole4">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole5">
+            <div class="mole"></div>
+        </div>
+
+        <div class="hole hole6">
+            <div class="mole"></div>
+        </div>
     </div>
-    <script src="./js/mortgageCalc.js"></script>
+    
+    <script src="./js/whackamole.js"></script>
 </body>
 </html>
