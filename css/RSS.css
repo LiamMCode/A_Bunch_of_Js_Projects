@@ -1,0 +1,110 @@
+:root 
+{
+    --mainPink: #ef7998;
+    --mainBlack: #000;
+    --mainPurple: #614AD3;
+}
+/* nav links */
+.navbar-toggler
+{
+  outline: none !important;
+}
+.toggler-icon
+{
+  font-size: 2.5rem;
+  color: var(--mainPink);
+}
+.nav-link 
+{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav-link:hover
+{
+  color: var(--mainBlack);
+}
+
+/* Dropdown menu code */
+.dropdown-toggle
+{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+}
+
+.dropdown 
+{
+    padding: 7px;
+    position: inherit;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    color: var(--mainPink);
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+body
+{
+    background-color: var(--mainBlack);
+}
+/* Code for RSS Feed */
+#canvas
+{
+    box-sizing: border-box;
+    width: 600px;
+    background-color: lightblue;
+    margin: 50px auto;
+    padding: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#heading
+{
+    text-align: center;
+}
+
+h3
+{
+    font-size: 25px;
+    padding: 15px;
+}
+
+ul
+{
+    list-style: none;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+ul a
+{
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2em;
+}
