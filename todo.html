@@ -3,10 +3,10 @@
     <head>
         <meta charset="UFT-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>Whack A Mole</title>
+        <title>ToDo App</title>
 
         <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/whackamole.css">
+        <link rel="stylesheet" href="./css/todo.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
         <link rel="stylesheet" href="./css/all.css">
     </head>
@@ -78,35 +78,30 @@
         </nav>
     </header>
     
-    <h1>Whack-a-mole!</h1><span class="score">0</span>
-    <button id="start" onClick="startGame()">Start!</button>
-
-    <div class="game">
-        <div class="hole hole1">
-            <div class="mole"></div>
+    <div class="header">
+        <div class="container">
+            <h1 class="header__title">To-do App</h1>
+            <h2 class="header__subtitle">What do you need to do?</h2>
         </div>
+    </div>
 
-        <div class="hole hole2">
-            <div class="mole"></div>
-        </div>
-
-        <div class="hole hole3">
-            <div class="mole"></div>
-        </div>
-
-        <div class="hole hole4">
-            <div class="mole"></div>
-        </div>
-
-        <div class="hole hole5">
-            <div class="mole"></div>
-        </div>
-
-        <div class="hole hole6">
-            <div class="mole"></div>
+    <div class="actions">
+        <div class="actions__container">
+            <input id="filter-todo" class="input" type="text" placeholder="Filter todos">
+            <label class="checkbox">
+                <input id="hide-completed" type="checkbox">Hide completed
+            </label>
         </div>
     </div>
     
-    <script src="./js/whackamole.js"></script>
+    <div class="container">
+        <div id="todos"></div>
+            <form id="todo-form">
+                <input type="text" class="input" placeholder="New Todo" name="addTodo">
+                <button class="button">Submit</button>
+            </form>
+    </div>
+    
+    <script src="./js/todo.js"></script>
 </body>
 </html>
