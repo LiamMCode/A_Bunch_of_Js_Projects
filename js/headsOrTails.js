@@ -41,12 +41,12 @@ function displayRandom(random)
     
         if (random === 1)
         {
-            displayResult.style.backgroundImage =  "url('../img/heads.png')";
+            displayResult.style.backgroundImage =  "url('./img/heads.png')";
             
         } 
         else 
         {
-            displayResult.style.backgroundImage =  "url('../img/tails.png')";
+            displayResult.style.backgroundImage =  "url('./img/tails.png')";
         }    
 }
 
