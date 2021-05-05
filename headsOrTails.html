@@ -1,0 +1,108 @@
+<!DOCTYPE Html>
+<html lang = "en">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Heads Or Tails</title>
+
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+        <link rel="stylesheet" href="./css/all.css">
+        <link rel="stylesheet" href="./css/headsOrTails.css">
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg px-4">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
+                    <span class="toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="myNav">
+                    <ul class="navbar-nav mx-auto text-capitalize">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> Easy Projects <b class="caret"></b></a>
+                            <ul class="dropdown-content">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Colour Change</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="hex.html">Colour Change Hex Code</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="quotes.html">Random Quote</a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="counter.html">Counter</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="Gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="calculator.html">Calculator</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="clock.html">Clock</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="mortgage.html">Mortgage Calc.</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="RSS.html">RSS Feed for BBC News</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> Intermediate Projects <b class="caret"></b></a>
+                            <ul class="dropdown-content">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="bakerywebpage.html">Bakery Webpage</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="budget.html">Budgeting</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="brickBreaker.html">Brick Breaker</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="WhackAMole.html">Whack A Mole</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="todo.html">ToDo</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="hangman.html">Hangman</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="headsOrTails.html">Heads Or Tails</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    
+        <div class="canvas">
+            <h1>First Player to 5 Points Win!</h1>
+            <div class="selection">Player Selected: <span id="player-selection"></span></div><div class="selection">Computer Selected: <span id="computer-selection"></span></div>
+                <div id="center">
+                    <div id="winner"></div>
+                    <div id="image"></div>
+                </div>
+
+            <div>
+                <div id="player">Player: <span id="player-score">0</span></div>
+                <div id="computer">Computer: <span id="computer-score">0</span></div>
+            </div>
+            <div>
+                <h2>Make a Selection</h2>
+                <button id="heads">Heads</button>
+                <button id="tails">Tails</button>
+            </div>
+        </div>
+    
+        <script src="./js/headsOrTails.js"></script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+:root 
+{
+    --mainPink: #ef7998;
+    --mainBlack: #000;
+}
+/* nav links */
+.navbar-toggler
+{
+  outline: none !important;
+}
+.toggler-icon
+{
+  font-size: 2.5rem;
+  color: var(--mainPink);
+}
+.nav-link 
+{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav-link:hover
+{
+  color: var(--mainBlack);
+}
+
+/* Dropdown menu code */
+.dropdown-toggle
+{
+  color: var(--mainPink);
+  font-size: 1.5rem;
+}
+
+.dropdown 
+{
+    padding: 7px;
+    position: inherit;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{
+    color: var(--mainPink);
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+@keyframes spin 
+{
+    0% {background: url("../img/heads.png")}
+    
+    25% {background: url("../img/tails.png")}
+    
+    50% {background: url("../img/heads.png")}
+    
+    75% {background: url("../img/tails.png")}
+    
+    100% {background: url("../img/heads.png")}
+}
+
+
+#image
+{
+    background: url("../img/heads.png");
+    width: 227px;
+    height: 337px;
+    
+}
+
+.animate
+{
+    background: url("../img/heads.png");
+    width: 227px;
+    height: 337px;
+    animation-name: spin;
+    animation-iteration-count: 2;
+    animation-duration: 1s;
+}
+
+.canvas
+{
+    width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+#center
+{
+    width: 227px;
+    margin: 15px auto;
+}
+
+.selection, #player, #computer
+{
+    display: inline;
+    margin: 25px;
+    font-size: 1.3em;
+}
+
+button 
+{
+    font-size: 1.2em;
+    border-radius: 5px;
+}
