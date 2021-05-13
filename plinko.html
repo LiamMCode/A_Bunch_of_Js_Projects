@@ -3,12 +3,21 @@
     <head>
         <meta charset="UFT-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-        <title>Heads Or Tails</title>
+        <title>Plinko</title>
 
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
         <link rel="stylesheet" href="./css/all.css">
-        <link rel="stylesheet" href="./css/headsOrTails.css">
+        <link rel="stylesheet" href="./css/plinko.css">
+        
+        <script src="./js/p5.min.js"></script>
+        <script src="./js/p5.dom.min.js"></script>
+        <script src="./js/p5.sound.min.js"></script>
+        <script src="./js/matter.js"></script>
+        <script src="./js/Ground.js"></script>
+        <script src="./js/Particle.js"></script>
+        <script src="./js/Divisions.js"></script>
+        <script src="./js/Plinko.js"></script>
     </head>
     
     <body>
@@ -86,26 +95,6 @@
                 </div>
             </nav>
         </header>
-    
-        <div class="canvas">
-            <h1>First Player to 5 Points Win!</h1>
-            <div class="selection">Player Selected: <span id="player-selection"></span></div><div class="selection">Computer Selected: <span id="computer-selection"></span></div>
-                <div id="center">
-                    <div id="winner"></div>
-                    <div id="image"></div>
-                </div>
-
-            <div>
-                <div id="player">Player: <span id="player-score">0</span></div>
-                <div id="computer">Computer: <span id="computer-score">0</span></div>
-            </div>
-            <div>
-                <h2>Make a Selection</h2>
-                <button id="heads">Heads</button>
-                <button id="tails">Tails</button>
-            </div>
-        </div>
-    
-        <script src="./js/headsOrTails.js"></script>
+        <script src="./js/sketch.js"></script>
     </body>
 </html>
